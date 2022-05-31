@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrainingCoursesMobile.PageMains">
+    <ContentPage.Content>
+        <StackLayout Spacing="0">
+            <ListView x:Name="lvCourses" ItemsSource="{Binding}" ItemSelected="lvCourses_ItemSelected" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <ViewCell.View>
+                                <Grid>
+                                    <Image Source="Fon_vertical.jpg" Aspect="Fill" Opacity="0.8"/>
+                                    <Label Text="{Binding Program}" FontSize="14"
+                                           LineBreakMode="TailTruncation" VerticalTextAlignment="Center"
+                                           TextColor="#152f57" Margin="3"
+                                           MaxLines="2"/>
+                                </Grid>
+                            </ViewCell.View>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Frame BackgroundColor="#10579e" CornerRadius="0" VerticalOptions="End">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <Button Text="Добавить" BackgroundColor="#9bafcc" Margin="10, 0, 10, 0" TextColor="#152f57" BorderColor="#152f57" BorderWidth="2" CornerRadius="20" x:Name="btnAdd" Clicked="btnAdd_Clicked" WidthRequest="200"/>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

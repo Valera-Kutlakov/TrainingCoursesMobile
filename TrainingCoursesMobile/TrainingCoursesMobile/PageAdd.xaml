@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrainingCoursesMobile.PageAdd">
+    <ContentPage.Content>
+        <Grid>
+            <Image Source="Fon.jpg" Aspect="Fill"/>
+            <ScrollView>
+                <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="0" Margin="0, 0, 0, 150">
+                    <Entry Placeholder="Название курса" FontSize="20" TextColor="#152f57" Margin="50, 0, 50, 0" PlaceholderColor="#152f57" x:Name="txbProgram"/>
+                    <Label Margin="54, 0, 0, 0" Text="Организация" FontSize="20" TextColor="#152f57"/>
+                    <Picker FontSize="20" TextColor="#152f57" Margin="50, 0, 50, 0" x:Name="pickOrganization" ItemDisplayBinding="{Binding Title}"/>
+                    <Label Margin="54, 0, 0, 0" Text="Дата начала" FontSize="20" TextColor="#152f57"/>
+                    <DatePicker Margin="50, 0, 50, 0" Format="dd.MM.yyyy" x:Name="dpStart" TextColor="#152f57"/>
+                    <Label Margin="54, 0, 0, 0" Text="Дата окончания" FontSize="20" TextColor="#152f57"/>
+                    <DatePicker Margin="50, 0, 50, 0" Format="dd.MM.yyyy" x:Name="dpEnd" TextColor="#152f57"/>
+                    <Entry Placeholder="Количество часов" FontSize="20" TextColor="#152f57" Margin="50, 0, 50, 0" PlaceholderColor="#152f57" Keyboard="Numeric" x:Name="txbCountHours"/>
+                    <Entry Placeholder="Максимум человек" FontSize="20" TextColor="#152f57" Margin="50, 0, 50, 0" PlaceholderColor="#152f57" Keyboard="Numeric" x:Name="txbCountPeopleMax"/>
+                    <Label Margin="54, 0, 0, 0" Text="Тип курса" FontSize="20" TextColor="#152f57"/>
+                    <Picker FontSize="20" TextColor="#152f57" Margin="50, 0, 50, 0" x:Name="pickCourseForm" ItemDisplayBinding="{Binding Title}"/>
+                    <Label Margin="54, 0, 0, 0" Text="Квалификация" FontSize="20" TextColor="#152f57"/>
+                    <Picker FontSize="20" TextColor="#152f57" Margin="50, 0, 50, 0" x:Name="pickQualification" ItemDisplayBinding="{Binding Title}"/>
+                    <Editor Placeholder="Описание" FontSize="20" TextColor="#152f57" Margin="50, 0, 50, 0" PlaceholderColor="#152f57" x:Name="txbDescription" HeightRequest="300"/>
+                    <Frame BackgroundColor="#10579e" CornerRadius="0" VerticalOptions="End">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                            <Button Text="Добавить" BackgroundColor="#9bafcc" Margin="10, 0, 10, 0" TextColor="#152f57" BorderColor="#152f57" BorderWidth="2" CornerRadius="20" x:Name="btnAdd" Clicked="btnAdd_Clicked" WidthRequest="200"/>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

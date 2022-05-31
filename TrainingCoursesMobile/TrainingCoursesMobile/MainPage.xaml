@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrainingCoursesMobile.MainPage">
+    
+    <Grid>
+        <Image Source="Fon.jpg" Aspect="Fill"/>
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" Spacing="0" Margin="0, 0, 0, 150">
+            <Image Source="icon.png" Margin="50, 0, 50, 0" Aspect="AspectFill"/>
+            <Label Text="Авторизация" HorizontalTextAlignment="Center" TextColor="#10579e" FontSize="26" Margin="50, 0, 50, 50"/>
+            <Entry Placeholder="Логин" FontSize="20" TextColor="#10579e" Margin="50, 0, 50, 0" PlaceholderColor="#10579e" x:Name="txbLogin"/>
+            <Entry Placeholder="Пароль" FontSize="20" TextColor="#10579e" IsPassword="True" Margin="50, 0, 50, 0" PlaceholderColor="#10579e" x:Name="txbPassword"/>
+        </StackLayout>
+        <Frame BackgroundColor="#10579e" CornerRadius="0" VerticalOptions="End">
+            <Button Text="Войти" BackgroundColor="#9bafcc" Margin="50, 0, 50, 0" TextColor="#152f57" BorderColor="#152f57" BorderWidth="2" CornerRadius="20" x:Name="btnInside" Clicked="btnInside_Clicked"/>
+        </Frame>
+    </Grid>
+
+</ContentPage>
